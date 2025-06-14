@@ -12,3 +12,4 @@ C:\ESTRUCTURAS DE DATOS\TAREAS\obj\Debug\net9.0\refint\TAREAS.dll
 C:\ESTRUCTURAS DE DATOS\TAREAS\obj\Debug\net9.0\TAREAS.pdb
 C:\ESTRUCTURAS DE DATOS\TAREAS\obj\Debug\net9.0\TAREAS.genruntimeconfig.cache
 C:\ESTRUCTURAS DE DATOS\TAREAS\obj\Debug\net9.0\ref\TAREAS.dll
+C:\ESTRUCTURAS DE DATOS\TAREAS\obj\Debug\net9.0\TAREAS.sourcelink.json

@@ -1,0 +1,14 @@
+C:\ESTRUCTURAS DE DATOS\TAREAS\bin\Debug\net9.0\TAREAS.exe
+C:\ESTRUCTURAS DE DATOS\TAREAS\bin\Debug\net9.0\TAREAS.deps.json
+C:\ESTRUCTURAS DE DATOS\TAREAS\bin\Debug\net9.0\TAREAS.runtimeconfig.json
+C:\ESTRUCTURAS DE DATOS\TAREAS\bin\Debug\net9.0\TAREAS.dll
+C:\ESTRUCTURAS DE DATOS\TAREAS\bin\Debug\net9.0\TAREAS.pdb
+C:\ESTRUCTURAS DE DATOS\TAREAS\obj\Debug\net9.0\TAREAS.GeneratedMSBuildEditorConfig.editorconfig
+C:\ESTRUCTURAS DE DATOS\TAREAS\obj\Debug\net9.0\TAREAS.AssemblyInfoInputs.cache
+C:\ESTRUCTURAS DE DATOS\TAREAS\obj\Debug\net9.0\TAREAS.AssemblyInfo.cs
+C:\ESTRUCTURAS DE DATOS\TAREAS\obj\Debug\net9.0\TAREAS.csproj.CoreCompileInputs.cache
+C:\ESTRUCTURAS DE DATOS\TAREAS\obj\Debug\net9.0\TAREAS.dll
+C:\ESTRUCTURAS DE DATOS\TAREAS\obj\Debug\net9.0\refint\TAREAS.dll
+C:\ESTRUCTURAS DE DATOS\TAREAS\obj\Debug\net9.0\TAREAS.pdb
+C:\ESTRUCTURAS DE DATOS\TAREAS\obj\Debug\net9.0\TAREAS.genruntimeconfig.cache
+C:\ESTRUCTURAS DE DATOS\TAREAS\obj\Debug\net9.0\ref\TAREAS.dll

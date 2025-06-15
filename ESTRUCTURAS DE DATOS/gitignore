@@ -1,0 +1,57 @@
+# Archivos y directorios de Visual Studio
+.vs/
+*.suo
+*.user
+*.userprefs
+*.designer.cs  # Si no quieres subir los archivos de diseñador generados
+*.log
+*.pdb
+*.tlog
+*.trx
+*.bak
+*.sbr
+*.bsc
+*.ncb
+*.resource
+*.resources
+*.cache
+*.resharper
+*.vspscc
+*.vssscc
+*.build-info
+*.fsx.fsi
+*.fsharp.fsi
+*.webtest
+*.testsettings
+*.CodeAnalysisLog.xml
+*.DotSettings
+*.DotSettings.user
+*.TestSettings
+*.vshost.*
+
+# Archivos de la solución y proyecto de Visual Studio
+*.sln      # Ignora el archivo de solución (.sln)
+*.csproj   # Ignora los archivos de proyecto C# (.csproj)
+*.user     # Mantengo este por si acaso, aunque *user debería cubrirlo
+
+# Archivos de datos y configuración
+*.json     # Ignora todos los archivos JSON
+
+# Carpeta de paquetes NuGet
+packages/
+
+# Binarios y objetos de compilación
+[Bb]in/
+[Oo]bj/      # Ignora la carpeta obj
+
+# Archivos de instalación
+*.msi
+*.exe
+*.dll
+*.mdb
+*.ilk
+*.idb
+
+# Otros
+Thumbs.db
+Desktop.ini

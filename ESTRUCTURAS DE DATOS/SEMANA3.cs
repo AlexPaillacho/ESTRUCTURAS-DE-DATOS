@@ -52,7 +52,7 @@
             // Mostramos el teléfono o un mensaje si está vacío/nulo
             Console.WriteLine($"  - Teléfono {i + 1}: {(string.IsNullOrEmpty(Telefonos[i]) ? "No especificado" : Telefonos[i])}");
         }
-        Console.WriteLine("--------------------------------------\n");
+        Console.WriteLine("--\n");
     }
 }
 

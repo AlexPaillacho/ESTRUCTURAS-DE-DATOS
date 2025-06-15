@@ -60,19 +60,19 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("--- Demostración de Registro de Estudiantes ---\n");
+        Console.WriteLine("Demostración de Registro de Estudiantes \n");
 
-        //   Ejemplo 1 Estudiante sin teléfonos iniciales
+        // Ejemplo 1 Estudiante sin teléfonos iniciales
         string[] telAlex = { "", "","" };
         Estudiante estudiante1 = new Estudiante(1, "Alex", "Rey", "Calle e2e", telAlex);
         estudiante1.MostrarInformacion();
 
-        // --- Ejemplo 2 Estudiante con 3 teléfonos  
+        // Ejemplo 2 Estudiante con 3 teléfonos  
         string[] telLore = { "0989652331", "0989563214","0986532145" }; // Solo 3 teléfonos
         Estudiante estudiante2 = new Estudiante(2, "Lore", "Castillo", "maldonado 45", telLore);
         estudiante2.MostrarInformacion();
 
-        // --- Ejemplo 3 Estudiante con 3 teléfonos 
+        // Ejemplo 3 Estudiante con 3 teléfonos 
         Estudiante estudiante3 = new Estudiante(3, "Bryan", "Ramirez", "guamani", new string[] { }); // Array vacío
         estudiante3.Telefonos[0] = "0956324552";
         estudiante3.Telefonos[1] = "0956874552";
@@ -83,7 +83,7 @@ public class Program
 
        
        
-        // --- Ejemplo 4: Array (matriz) de objetos Estudiante ---
+        // Ejemplo 4: Array (matriz) de objetos Estudiante 
         Console.WriteLine("--- Demostración de un Array de Estudiantes ---");
         Estudiante[] listaEstudiantes = new Estudiante[2]; // Array para 2 estudiantes
 

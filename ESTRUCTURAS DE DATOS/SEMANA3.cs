@@ -1,11 +1,11 @@
 ﻿// MATRIZ DE REGISTRO
-public class Estudiante
+ class Estudiante
 {
     // Propiedades de la clase Estudiante
-    public int Id { get; set; }
-    public string Nombres { get; set; }
-    public string Apellidos { get; set; }
-    public string Direccion { get; set; }
+     int Id { get; set; }
+     string Nombres { get; set; }
+     string Apellidos { get; set; }
+     string Direccion { get; set; }
 
     // Array para almacenar los tres números de teléfono
     public string[] Telefonos { get; set; }
@@ -34,7 +34,7 @@ public class Estudiante
     }
 
     // Constructor sin parámetros (opcional, pero útil)
-    public Estudiante()
+      Estudiante()
     {
         Telefonos = new string[3]; // Inicializa el array con 3 elementos vacíos ("") o null
     }

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESTRUCTURAS DE DATOS", "ESTRUCTURAS DE DATOS\ESTRUCTURAS DE DATOS.csproj", "{D82975C8-9B4B-4AD1-853F-DC34835AF38F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEMANA2", "SEMANA2\SEMANA2.csproj", "{3372CC30-48F9-4A4A-9519-385C152EF697}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,18 @@ Global
 		{D82975C8-9B4B-4AD1-853F-DC34835AF38F}.Release|x64.Build.0 = Release|Any CPU
 		{D82975C8-9B4B-4AD1-853F-DC34835AF38F}.Release|x86.ActiveCfg = Release|Any CPU
 		{D82975C8-9B4B-4AD1-853F-DC34835AF38F}.Release|x86.Build.0 = Release|Any CPU
+		{3372CC30-48F9-4A4A-9519-385C152EF697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3372CC30-48F9-4A4A-9519-385C152EF697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3372CC30-48F9-4A4A-9519-385C152EF697}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3372CC30-48F9-4A4A-9519-385C152EF697}.Debug|x64.Build.0 = Debug|Any CPU
+		{3372CC30-48F9-4A4A-9519-385C152EF697}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3372CC30-48F9-4A4A-9519-385C152EF697}.Debug|x86.Build.0 = Debug|Any CPU
+		{3372CC30-48F9-4A4A-9519-385C152EF697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3372CC30-48F9-4A4A-9519-385C152EF697}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3372CC30-48F9-4A4A-9519-385C152EF697}.Release|x64.ActiveCfg = Release|Any CPU
+		{3372CC30-48F9-4A4A-9519-385C152EF697}.Release|x64.Build.0 = Release|Any CPU
+		{3372CC30-48F9-4A4A-9519-385C152EF697}.Release|x86.ActiveCfg = Release|Any CPU
+		{3372CC30-48F9-4A4A-9519-385C152EF697}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

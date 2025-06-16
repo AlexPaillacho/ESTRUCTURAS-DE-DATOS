@@ -33,7 +33,7 @@
         static void Main(string[] args)
         {Console.WriteLine("\n--- Rectángulo ---");
             // Crear un rectángulo con longitud 10 y ancho 4
-            Rectangulo miRectangulo = new Rectangulo(10.0, 4.0);
+            Rectangulo miRectangulo = new Rectangulo(20, 5);
             Console.WriteLine($"Longitud: {miRectangulo.Longitud}");
             Console.WriteLine($"Ancho: {miRectangulo.Ancho}");
             Console.WriteLine($"Área: {miRectangulo.CalcularArea():F2}");

@@ -42,7 +42,10 @@ packages/
 
 # Binarios y objetos de compilación
 [Bb]in/
-[Oo]bj/      # Ignora la carpeta obj
+[Oo]bj/  
+[Cc]sproj/
+               # Ignora la carpeta obj
+
 
 # Archivos de instalación
 *.msi

@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "ESTRUCTURAS DE DATOS/1.0.0": {
+      "SEMANA4/1.0.0": {
         "runtime": {
-          "ESTRUCTURAS DE DATOS.dll": {}
+          "SEMANA4.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "ESTRUCTURAS DE DATOS/1.0.0": {
+    "SEMANA4/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

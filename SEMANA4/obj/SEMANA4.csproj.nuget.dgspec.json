@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ESTRUCTURAS DE DATOS\\ESTRUCTURAS DE DATOS\\ESTRUCTURAS DE DATOS.csproj": {}
+    "C:\\ESTRUCTURAS DE DATOS\\SEMANA4\\SEMANA4.csproj": {}
   },
   "projects": {
-    "C:\\ESTRUCTURAS DE DATOS\\ESTRUCTURAS DE DATOS\\ESTRUCTURAS DE DATOS.csproj": {
+    "C:\\ESTRUCTURAS DE DATOS\\SEMANA4\\SEMANA4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ESTRUCTURAS DE DATOS\\ESTRUCTURAS DE DATOS\\ESTRUCTURAS DE DATOS.csproj",
-        "projectName": "ESTRUCTURAS DE DATOS",
-        "projectPath": "C:\\ESTRUCTURAS DE DATOS\\ESTRUCTURAS DE DATOS\\ESTRUCTURAS DE DATOS.csproj",
+        "projectUniqueName": "C:\\ESTRUCTURAS DE DATOS\\SEMANA4\\SEMANA4.csproj",
+        "projectName": "SEMANA4",
+        "projectPath": "C:\\ESTRUCTURAS DE DATOS\\SEMANA4\\SEMANA4.csproj",
         "packagesPath": "C:\\Users\\alex\\.nuget\\packages\\",
-        "outputPath": "C:\\ESTRUCTURAS DE DATOS\\ESTRUCTURAS DE DATOS\\obj\\",
+        "outputPath": "C:\\ESTRUCTURAS DE DATOS\\SEMANA4\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alex\\AppData\\Roaming\\NuGet\\NuGet.Config"

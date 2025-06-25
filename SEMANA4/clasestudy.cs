@@ -33,7 +33,7 @@ public class clasestudy
 
         else
         {
-            Console.WriteLine("No se han registrado teléfonos");
+            Console.WriteLine("No se han registrado teléfonos.");
         }
     
         

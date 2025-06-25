@@ -1,6 +1,6 @@
 ﻿using System; // Necesario para Console.WriteLine y Console.ReadLine
 
-public class Program
+public class CONTACTOS
 {
     public static void Main(string[] args)
     {
@@ -10,18 +10,21 @@ public class Program
         clasestudy[] contactos = new clasestudy[5];
 
         
-        for (int i = 0; i < contactos.Length; i++) // Iteramos de 0 a 4
+        for (int i = 0; i < contactos.Length-1; i++) // Iteramos de 0 a 4
         {
+
+
+
             Console.WriteLine($"\n--- Creando contacto para la posición {i} (Contacto {i + 1}) ---");
 
-            // Pedir el nombre al usuario
+            // Pedir el nombre del contacto
             Console.Write("Ingrese el nombre del contacto: ");
             string nombreIngresado = Console.ReadLine();
 
-            // Pedir al menos un teléfono (podrías expandir esto para múltiples teléfonos)
+            // Pedir elnumero de teléfono 
             Console.Write("Ingrese un número de teléfono: ");
             string telefonoIngresado = Console.ReadLine();
-            string[] telefonos = { telefonoIngresado }; // Crear un array de string con este único teléfono
+            string[] telefonos = { telefonoIngresado }; 
 
             // Instanciar (crear) un nuevo objeto clasestudy y asignarlo a la posición actual del array
             contactos[i] = new clasestudy(nombreIngresado, telefonos);
@@ -35,6 +38,8 @@ public class Program
         // Asegúrate de que el bucle también sea de 0 a Length-1
         for (int i = 0; i < contactos.Length; i++)
         {
+            if (contactos[i] != null)
+           
             // Ahora 'contactos[i]' ya NO es null, porque lo inicializamos en el bucle anterior.
             Console.WriteLine($"Contacto {i + 1}: {contactos[i].getnombre()}");
         }

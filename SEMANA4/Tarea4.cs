@@ -48,9 +48,3 @@ public class CONTACTOS
         // Console.ReadKey(); // Opcional: para que la consola no se cierre inmediatamente
     }
 }
-
-
-
-
- 
-

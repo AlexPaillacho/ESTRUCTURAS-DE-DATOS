@@ -7,7 +7,7 @@ Console.WriteLine("==============================");
 
 List<string> asignaturas = ["Ingles", "Metodologia", "Sistemas", "Fisica"];
 
-List<int> notas = [8, 9, 10, 8 ];
+List<int> asignaturas2 = [8, 9, 10, 8 ];
 
 
 foreach (string materia in asignaturas)
@@ -27,12 +27,18 @@ Console.WriteLine("==============================");
 
 foreach (string materia in asignaturas)
 {
-    Console.WriteLine($"Cuanto sacaste en   {materia}");
+    Console.WriteLine($"Cuanto sacaste en {materia}");
+}
 
+Console.WriteLine("=============================="); 
 
-    foreach (int nota in notas)
+foreach (string materia in asignaturas)
+{
+    foreach (int notas in asignaturas2)
     {
-    Console.WriteLine($"Yo saque en  {materia} + {notas}");
-
+      Console.WriteLine($"Yo saque en {materia} {notas}");
     }
 }
+
+
+

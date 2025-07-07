@@ -87,10 +87,13 @@ public class Program
         ListaEnlazada miLista = new ListaEnlazada();
 
         
-        miLista.Agregar(10);
-        miLista.Agregar(20);
+        miLista.Agregar(24);
+        miLista.Agregar(26);
+        miLista.Agregar(28);
+        miLista.Agregar(29);
         miLista.Agregar(30);
-        miLista.Agregar(40);
+        miLista.Agregar(32);
+        miLista.Agregar(34);
 
         miLista.ImprimirLista(); 
 

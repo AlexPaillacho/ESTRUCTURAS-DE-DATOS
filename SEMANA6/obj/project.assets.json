@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\alex\\OneDrive\\Documentos\\GitHub\\ESTRUCTURAS-DE-DATOS\\SEMANA5\\SEMANA5.csproj",
-      "projectName": "SEMANA5",
-      "projectPath": "c:\\Users\\alex\\OneDrive\\Documentos\\GitHub\\ESTRUCTURAS-DE-DATOS\\SEMANA5\\SEMANA5.csproj",
+      "projectUniqueName": "C:\\Users\\alex\\OneDrive\\Documentos\\GitHub\\ESTRUCTURAS-DE-DATOS\\SEMANA6\\SEMANA6.csproj",
+      "projectName": "SEMANA6",
+      "projectPath": "C:\\Users\\alex\\OneDrive\\Documentos\\GitHub\\ESTRUCTURAS-DE-DATOS\\SEMANA6\\SEMANA6.csproj",
       "packagesPath": "C:\\Users\\alex\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\alex\\OneDrive\\Documentos\\GitHub\\ESTRUCTURAS-DE-DATOS\\SEMANA5\\obj\\",
+      "outputPath": "C:\\Users\\alex\\OneDrive\\Documentos\\GitHub\\ESTRUCTURAS-DE-DATOS\\SEMANA6\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alex\\AppData\\Roaming\\NuGet\\NuGet.Config"

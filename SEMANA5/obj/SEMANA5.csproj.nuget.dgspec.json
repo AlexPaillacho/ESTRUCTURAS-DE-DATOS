@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ESTRUCTURAS DE DATOS\\ESTRUCTURAS-DE-DATOS\\SEMANA5\\SEMANA5.csproj": {}
+    "c:\\Users\\alex\\OneDrive\\Documentos\\GitHub\\ESTRUCTURAS-DE-DATOS\\SEMANA5\\SEMANA5.csproj": {}
   },
   "projects": {
-    "C:\\ESTRUCTURAS DE DATOS\\ESTRUCTURAS-DE-DATOS\\SEMANA5\\SEMANA5.csproj": {
+    "c:\\Users\\alex\\OneDrive\\Documentos\\GitHub\\ESTRUCTURAS-DE-DATOS\\SEMANA5\\SEMANA5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ESTRUCTURAS DE DATOS\\ESTRUCTURAS-DE-DATOS\\SEMANA5\\SEMANA5.csproj",
+        "projectUniqueName": "c:\\Users\\alex\\OneDrive\\Documentos\\GitHub\\ESTRUCTURAS-DE-DATOS\\SEMANA5\\SEMANA5.csproj",
         "projectName": "SEMANA5",
-        "projectPath": "C:\\ESTRUCTURAS DE DATOS\\ESTRUCTURAS-DE-DATOS\\SEMANA5\\SEMANA5.csproj",
+        "projectPath": "c:\\Users\\alex\\OneDrive\\Documentos\\GitHub\\ESTRUCTURAS-DE-DATOS\\SEMANA5\\SEMANA5.csproj",
         "packagesPath": "C:\\Users\\alex\\.nuget\\packages\\",
-        "outputPath": "C:\\ESTRUCTURAS DE DATOS\\ESTRUCTURAS-DE-DATOS\\SEMANA5\\obj\\",
+        "outputPath": "c:\\Users\\alex\\OneDrive\\Documentos\\GitHub\\ESTRUCTURAS-DE-DATOS\\SEMANA5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alex\\AppData\\Roaming\\NuGet\\NuGet.Config"

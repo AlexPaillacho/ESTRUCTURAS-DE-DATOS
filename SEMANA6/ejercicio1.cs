@@ -1,5 +1,6 @@
 ﻿
 // ejercicio 1
+//recorrer la lista hasta el final e ir contando el número de saltos.
 
 public class Nodo
 

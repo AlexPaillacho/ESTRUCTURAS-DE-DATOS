@@ -1,4 +1,6 @@
 // Ejercicio 2
+//método de búsqueda en la clase lista, el cual debe retornar el número de
+//veces que se encuentra el dato dentro de la lista.
 public class Nodo
 {
     public int Valor { get; set; }

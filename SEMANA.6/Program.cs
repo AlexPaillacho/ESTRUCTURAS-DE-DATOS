@@ -91,9 +91,7 @@ public class Program
         miLista.Agregar(26);
         miLista.Agregar(28);
         miLista.Agregar(29);
-        miLista.Agregar(30);
-        miLista.Agregar(32);
-        miLista.Agregar(34);
+       
 
         miLista.ImprimirLista(); 
 

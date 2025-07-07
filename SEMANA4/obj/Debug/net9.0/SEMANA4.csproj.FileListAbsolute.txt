@@ -13,3 +13,18 @@ C:\ESTRUCTURAS DE DATOS\SEMANA4\obj\Debug\net9.0\refint\SEMANA4.dll
 C:\ESTRUCTURAS DE DATOS\SEMANA4\obj\Debug\net9.0\SEMANA4.pdb
 C:\ESTRUCTURAS DE DATOS\SEMANA4\obj\Debug\net9.0\SEMANA4.genruntimeconfig.cache
 C:\ESTRUCTURAS DE DATOS\SEMANA4\obj\Debug\net9.0\ref\SEMANA4.dll
+C:\Users\alex\OneDrive\Documentos\GitHub\ESTRUCTURAS-DE-DATOS\SEMANA4\bin\Debug\net9.0\SEMANA4.exe
+C:\Users\alex\OneDrive\Documentos\GitHub\ESTRUCTURAS-DE-DATOS\SEMANA4\bin\Debug\net9.0\SEMANA4.deps.json
+C:\Users\alex\OneDrive\Documentos\GitHub\ESTRUCTURAS-DE-DATOS\SEMANA4\bin\Debug\net9.0\SEMANA4.runtimeconfig.json
+C:\Users\alex\OneDrive\Documentos\GitHub\ESTRUCTURAS-DE-DATOS\SEMANA4\bin\Debug\net9.0\SEMANA4.dll
+C:\Users\alex\OneDrive\Documentos\GitHub\ESTRUCTURAS-DE-DATOS\SEMANA4\bin\Debug\net9.0\SEMANA4.pdb
+C:\Users\alex\OneDrive\Documentos\GitHub\ESTRUCTURAS-DE-DATOS\SEMANA4\obj\Debug\net9.0\SEMANA4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alex\OneDrive\Documentos\GitHub\ESTRUCTURAS-DE-DATOS\SEMANA4\obj\Debug\net9.0\SEMANA4.AssemblyInfoInputs.cache
+C:\Users\alex\OneDrive\Documentos\GitHub\ESTRUCTURAS-DE-DATOS\SEMANA4\obj\Debug\net9.0\SEMANA4.AssemblyInfo.cs
+C:\Users\alex\OneDrive\Documentos\GitHub\ESTRUCTURAS-DE-DATOS\SEMANA4\obj\Debug\net9.0\SEMANA4.csproj.CoreCompileInputs.cache
+C:\Users\alex\OneDrive\Documentos\GitHub\ESTRUCTURAS-DE-DATOS\SEMANA4\obj\Debug\net9.0\SEMANA4.sourcelink.json
+C:\Users\alex\OneDrive\Documentos\GitHub\ESTRUCTURAS-DE-DATOS\SEMANA4\obj\Debug\net9.0\SEMANA4.dll
+C:\Users\alex\OneDrive\Documentos\GitHub\ESTRUCTURAS-DE-DATOS\SEMANA4\obj\Debug\net9.0\refint\SEMANA4.dll
+C:\Users\alex\OneDrive\Documentos\GitHub\ESTRUCTURAS-DE-DATOS\SEMANA4\obj\Debug\net9.0\SEMANA4.pdb
+C:\Users\alex\OneDrive\Documentos\GitHub\ESTRUCTURAS-DE-DATOS\SEMANA4\obj\Debug\net9.0\SEMANA4.genruntimeconfig.cache
+C:\Users\alex\OneDrive\Documentos\GitHub\ESTRUCTURAS-DE-DATOS\SEMANA4\obj\Debug\net9.0\ref\SEMANA4.dll

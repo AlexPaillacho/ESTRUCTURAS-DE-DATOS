@@ -1,5 +1,5 @@
 ﻿
-// clase REVISAR
+// clase REVISAR EXPRESIONES
 public class REVISAREXPRESIONES
 {
     public static void Main(string[] args)

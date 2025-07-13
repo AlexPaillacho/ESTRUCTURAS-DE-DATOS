@@ -10,8 +10,8 @@ public class HanoiSolver
 
     public static void Main(string[] args)
     {
-        Console.WriteLine("--- Problema de las Torres de Hanói ---");
-        Console.Write("Ingrese el número de discos (ej. 3): ");
+        Console.WriteLine("=== Problema de las Torres de Hanói ===");
+        Console.Write("Ingrese el número de discos ( Por ejemplo. 3): ");
 
         while (!int.TryParse(Console.ReadLine(), out numberOfDisks) || numberOfDisks < 1)
         {

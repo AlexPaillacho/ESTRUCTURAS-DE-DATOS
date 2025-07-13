@@ -6,9 +6,9 @@ public class REVISAREXPRESIONES
     {
         Console.WriteLine("   Verificación de Paréntesis Balanceados  ");
         Console.WriteLine("Ingrese una expresión matemática:");
-        string? expression = Console.ReadLine();
+        string expression = Console.ReadLine();
 
-        if (string.IsNullOrEmpty (expression))
+        if (IsBalanced (expression))
         {
             Console.WriteLine("Salida: Fórmula balanceada");
         }

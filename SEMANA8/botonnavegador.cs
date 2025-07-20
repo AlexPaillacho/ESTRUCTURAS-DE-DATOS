@@ -1,13 +1,13 @@
 ﻿
     public class Simulación
     {
-        // Pila para el historial de páginas visitadas "hacia atrás"
-        private Stack<string> historialretroceder = new Stack<string>();
+        // Pila para el historial de páginas visitadas hacia atrás.
+        private Stack<string> historial_retroceder = new Stack<string>();
 
-        // Pila para el historial de páginas que se pueden "adelantar"
-        private Stack<string> historilaadelantar = new Stack<string>();
+        // Pila para el historial de páginas que se pueden adelantar.
+        private Stack<string> historial_adelantar = new Stack<string>();
 
-        // La URL de la página que el usuario está viendo actualmente
+        // La URL de la página que el usuario está viendo actualmente.
         private string paginaingresada;
 
        
@@ -21,39 +21,39 @@
         
         public void VisitPage(string url)
         {
-            // Solo añadimos a 'historialretoceder' si ya hay una página actual diferente.
+            // Se añade al historial_retoceder si ya hay una página actual diferente.
             if (!string.IsNullOrEmpty(paginaingresada) && paginaingresada != url)
             {
                 Console.WriteLine($"\nNavegando de '{paginaingresada}' a '{url}'...");
-                historialretroceder.Push(paginaingresada);
+                historial_retroceder.Push(paginaingresada);
             }
             else if (string.IsNullOrEmpty(paginaingresada))
             {
                 Console.WriteLine($"\nIniciando navegador en '{url}'...");
             } else {
                 Console.WriteLine($"\nYa estás en '{url}'.");
-                return; // Si la página es la misma, no hacemos nada.
+                return; // Si la página es la misma no hay cambios.
             }
 
             paginaingresada = url;
-            historilaadelantar.Clear(); // Borra el historial de avance cuando se visita una nueva página.
+            historial_adelantar.Clear(); // Borra el historial de avance cuando se visita una nueva página.
             Console.WriteLine($"Página actual: {paginaingresada}");
         }
 
-        /// <summary>
-        /// Simula el clic en el botón "retroceder".
-        /// </summary>
+      
+        // Simula el clic en el botón retroceder.
+
         public void GoBack()
         {
-            if (historialretroceder.Count == 0)
+            if (historial_retroceder.Count == 0)
             {
                 Console.WriteLine("\nNo hay historial para retroceder.");
                 return;
             }
 
             Console.WriteLine($"\nRetrocediendo de '{paginaingresada}'...");
-            historilaadelantar.Push(paginaingresada); // La página actual va al historial de 'adelante'
-            paginaingresada = historialretroceder.Pop(); // La página anterior se convierte en la actual
+            historial_adelantar.Push(paginaingresada); // La página actual va al historial de adelante.
+            paginaingresada = historial_retroceder.Pop(); // La página anterior se convierte en la actual.
             Console.WriteLine($"Página actual: {paginaingresada}");
         }
 
@@ -62,15 +62,15 @@
         /// </summary>
         public void GoForward()
         {
-            if (historilaadelantar.Count == 0)
+            if (historial_adelantar.Count == 0)
             {
                 Console.WriteLine("\nNo hay historial para adelantar.");
                 return;
             }
 
             Console.WriteLine($"\nAdelantando de '{paginaingresada}'...");
-            historialretroceder.Push(paginaingresada); // La página actual va al historial de 'atrás'
-            paginaingresada = historilaadelantar.Pop(); // La página siguiente se convierte en la actual
+            historial_retroceder.Push(paginaingresada); // La página actual va al historial de 'atrás'
+            paginaingresada = historial_adelantar.Pop(); // La página siguiente se convierte en la actual
             Console.WriteLine($"Página actual: {paginaingresada}");
         }
 
@@ -82,9 +82,9 @@
             Console.WriteLine("\n--- Estado del Navegador ---");
             Console.WriteLine($"Página actual: {paginaingresada}");
             // Mostramos el historial de atrás en orden de visita real (Reverse)
-            Console.WriteLine($"Historial Atrás: [{string.Join(", ", historialretroceder.Reverse().ToList())}]");
+            Console.WriteLine($"Historial Atrás: [{string.Join(", ", historial_retroceder.Reverse().ToList())}]");
             // Mostramos el historial de adelante como saldría con Pop (el más reciente primero)
-            Console.WriteLine($"Historial Adelante: [{string.Join(", ", historilaadelantar.ToList())}]");
+            Console.WriteLine($"Historial Adelante: [{string.Join(", ", historial_adelantar.ToList())}]");
             Console.WriteLine("----------------------------");
         }
     }
@@ -117,29 +117,14 @@
             navegador.GoBack(); // De facebook.com/feed a google.com
             navegador.ShowStatus();
 
-            navegador.GoBack(); // No hay más historial para retroceder
-            navegador.ShowStatus();
-
-            // Probando el botón adelantar
-            navegador.GoForward(); // De google.com a facebook.com/feed
-            navegador.ShowStatus();
-
-            navegador.GoForward(); // De facebook.com/feed a youtube.com/trending
-            navegador.ShowStatus();
-
-            // Navegar a una nueva página para ver cómo afecta el historial 'adelante'
-            navegador.VisitPage("https://www.UNIVERSIDAD ESTATAL AMAZONICA.com/explore");
+            navegador.VisitPage("https://www.UNIVERSIDAD ESTATAL AMAZONICA.com");
             navegador.ShowStatus(); // El historial 'adelante' debería estar vacío ahora
 
             navegador.GoBack(); // De github.com/explore a youtube.com/trending
             navegador.ShowStatus();
 
-            navegador.GoForward(); // De youtube.com/trending a github.com/explore
-            navegador.ShowStatus();
+           
 
-            navegador.GoForward(); // No hay más historial para adelantar
-            navegador.ShowStatus();
-
-            Console.ReadKey(); // Mantiene la consola abierta hasta que presiones una tecla
+            Console.ReadLine(); // Mantiene la consola abierta hasta que presiones una tecla
         }
     }

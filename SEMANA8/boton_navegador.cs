@@ -24,12 +24,12 @@
             // Se añade al historial_retoceder si ya hay una página actual diferente.
             if (!string.IsNullOrEmpty(paginaingresada) && paginaingresada != url)
             {
-                Console.WriteLine($"\nNavegando de '{paginaingresada}' a '{url}'...");
+                Console.WriteLine($"\nNavegando de '{paginaingresada}' a '{url}'");
                 historial_retroceder.Push(paginaingresada);
             }
             else if (string.IsNullOrEmpty(paginaingresada))
             {
-                Console.WriteLine($"\nIniciando navegador en '{url}'...");
+                Console.WriteLine($"\nIniciando navegador en '{url}'");
             } else {
                 Console.WriteLine($"\nYa estás en '{url}'.");
                 return; // Si la página es la misma no hay cambios.
@@ -41,7 +41,7 @@
         }
 
       
-        // Simula el clic en el botón retroceder.
+        // Simula el clic del botón retroceder.
 
         public void GoBack()
         {
@@ -57,10 +57,9 @@
             Console.WriteLine($"Página actual: {paginaingresada}");
         }
 
-        /// <summary>
-        /// Simula el clic en el botón "adelantar".
-        /// </summary>
-        public void GoForward()
+   
+        // Simula el clic del botón adelantar.
+               public void GoForward()
         {
             if (historial_adelantar.Count == 0)
             {
@@ -69,32 +68,32 @@
             }
 
             Console.WriteLine($"\nAdelantando de '{paginaingresada}'...");
-            historial_retroceder.Push(paginaingresada); // La página actual va al historial de 'atrás'
+            historial_retroceder.Push(paginaingresada); // La página actual va al historial de atrás.
             paginaingresada = historial_adelantar.Pop(); // La página siguiente se convierte en la actual
             Console.WriteLine($"Página actual: {paginaingresada}");
         }
 
-        /// <summary>
+        
         /// Muestra el estado actual de los historiales del navegador.
-        /// </summary>
+        
         public void ShowStatus()
         {
             Console.WriteLine("\n--- Estado del Navegador ---");
             Console.WriteLine($"Página actual: {paginaingresada}");
-            // Mostramos el historial de atrás en orden de visita real (Reverse)
+            // Mostramos el historial de atrás en orden de visita.
             Console.WriteLine($"Historial Atrás: [{string.Join(", ", historial_retroceder.Reverse().ToList())}]");
-            // Mostramos el historial de adelante como saldría con Pop (el más reciente primero)
+            // Mostramos el historial de adelante.
             Console.WriteLine($"Historial Adelante: [{string.Join(", ", historial_adelantar.ToList())}]");
             Console.WriteLine("----------------------------");
         }
     }
 
-    // --- Clase Principal (Program.cs) para la Ejecución ---
-    class Program
+    
+    class navegación
     {
         static void Main(string[] args)
         {
-            Simulación navegador = new Simulación(); // Inicia con google.com
+            Simulación navegador = new Simulación(); 
 
             // Simulación de navegación a diferentes páginas
             navegador.VisitPage("https://www.facebook.com");
@@ -105,26 +104,26 @@
             navegador.ShowStatus();
 
             // Probando el botón retroceder
-            navegador.GoBack(); // De facebook/profile a amazon.com/electronics
+            navegador.GoBack(); 
             navegador.ShowStatus();
 
-            navegador.GoBack(); // De amazon.com/electronics a youtube.com/trending
+            navegador.GoBack(); 
             navegador.ShowStatus();
 
-            navegador.GoBack(); // De youtube.com/trending a facebook.com/feed
+            navegador.GoBack();
             navegador.ShowStatus();
 
-            navegador.GoBack(); // De facebook.com/feed a google.com
+            navegador.GoBack(); 
             navegador.ShowStatus();
 
             navegador.VisitPage("https://www.UNIVERSIDAD ESTATAL AMAZONICA.com");
-            navegador.ShowStatus(); // El historial 'adelante' debería estar vacío ahora
+            navegador.ShowStatus(); 
 
-            navegador.GoBack(); // De github.com/explore a youtube.com/trending
+            navegador.GoBack(); 
             navegador.ShowStatus();
 
            
 
-            Console.ReadLine(); // Mantiene la consola abierta hasta que presiones una tecla
+            Console.ReadLine(); // Mantiene la consola abierta hasta que presione una tecla.
         }
     }

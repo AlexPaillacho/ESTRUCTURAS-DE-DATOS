@@ -8,26 +8,26 @@
         private Stack<string> historial_adelantar = new Stack<string>();
 
         // La URL de la página que el usuario está viendo actualmente.
-        private string paginaingresada;
+        private string pagina_ingresada;
 
        
         public Simulación(string primerapagina = "http://www.google.com")
         {
             Console.WriteLine($"\nIniciando navegador en: {primerapagina}");
-            paginaingresada = primerapagina;
-            Console.WriteLine($"Página actual: {paginaingresada}");
+            pagina_ingresada = primerapagina;
+            Console.WriteLine($"Página actual: {pagina_ingresada}");
         }
 
         
         public void VisitPage(string url)
         {
             // Se añade al historial_retoceder si ya hay una página actual diferente.
-            if (!string.IsNullOrEmpty(paginaingresada) && paginaingresada != url)
+            if (!string.IsNullOrEmpty(pagina_ingresada) && pagina_ingresada != url)
             {
-                Console.WriteLine($"\nNavegando de '{paginaingresada}' a '{url}'");
-                historial_retroceder.Push(paginaingresada);
+                Console.WriteLine($"\nNavegando de '{pagina_ingresada}' a '{url}'");
+                historial_retroceder.Push(pagina_ingresada);
             }
-            else if (string.IsNullOrEmpty(paginaingresada))
+            else if (string.IsNullOrEmpty(pagina_ingresada))
             {
                 Console.WriteLine($"\nIniciando navegador en '{url}'");
             } else {
@@ -35,9 +35,9 @@
                 return; // Si la página es la misma no hay cambios.
             }
 
-            paginaingresada = url;
+            pagina_ingresada = url;
             historial_adelantar.Clear(); // Borra el historial de avance cuando se visita una nueva página.
-            Console.WriteLine($"Página actual: {paginaingresada}");
+            Console.WriteLine($"Página actual: {pagina_ingresada}");
         }
 
       
@@ -51,10 +51,10 @@
                 return;
             }
 
-            Console.WriteLine($"\nRetrocediendo de '{paginaingresada}'...");
-            historial_adelantar.Push(paginaingresada); // La página actual va al historial de adelante.
-            paginaingresada = historial_retroceder.Pop(); // La página anterior se convierte en la actual.
-            Console.WriteLine($"Página actual: {paginaingresada}");
+            Console.WriteLine($"\nRetrocediendo de '{pagina_ingresada}'...");
+            historial_adelantar.Push(pagina_ingresada); // La página actual va al historial de adelante.
+            pagina_ingresada = historial_retroceder.Pop(); // La página anterior se convierte en la actual.
+            Console.WriteLine($"Página actual: {pagina_ingresada}");
         }
 
    
@@ -67,10 +67,10 @@
                 return;
             }
 
-            Console.WriteLine($"\nAdelantando de '{paginaingresada}'...");
-            historial_retroceder.Push(paginaingresada); // La página actual va al historial de atrás.
-            paginaingresada = historial_adelantar.Pop(); // La página siguiente se convierte en la actual
-            Console.WriteLine($"Página actual: {paginaingresada}");
+            Console.WriteLine($"\nAdelantando de '{pagina_ingresada}'...");
+            historial_retroceder.Push(pagina_ingresada); // La página actual va al historial de atrás.
+            pagina_ingresada = historial_adelantar.Pop(); // La página siguiente se convierte en la actual
+            Console.WriteLine($"Página actual: {pagina_ingresada}");
         }
 
         
@@ -79,7 +79,7 @@
         public void ShowStatus()
         {
             Console.WriteLine("\n--- Estado del Navegador ---");
-            Console.WriteLine($"Página actual: {paginaingresada}");
+            Console.WriteLine($"Página actual: {pagina_ingresada}");
             // Mostramos el historial de atrás en orden de visita.
             Console.WriteLine($"Historial Atrás: [{string.Join(", ", historial_retroceder.Reverse().ToList())}]");
             // Mostramos el historial de adelante.

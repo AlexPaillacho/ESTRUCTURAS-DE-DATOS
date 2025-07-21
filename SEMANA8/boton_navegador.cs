@@ -19,7 +19,7 @@
         }
 
         
-        public void VisitPage(string url)
+        public void Visitar_Pagina(string url)
         {
             // Se añade al historial_retoceder si ya hay una página actual diferente.
             if (!string.IsNullOrEmpty(pagina_ingresada) && pagina_ingresada != url)
@@ -96,10 +96,10 @@
             Simulación navegador = new Simulación(); 
 
             // Simulación de navegación a diferentes páginas
-            navegador.VisitPage("https://www.facebook.com");
-            navegador.VisitPage("https://www.youtube.com");
-            navegador.VisitPage("https://www.git hub .com");
-            navegador.VisitPage("https://www.facebook."); // Volvemos a Facebook
+            navegador.Visitar_Pagina("https://www.facebook.com");
+            navegador.Visitar_Pagina("https://www.youtube.com");
+            navegador.Visitar_Pagina("https://www.git hub .com");
+            navegador.Visitar_Pagina("https://www.facebook."); // Volvemos a Facebook
 
             navegador.ShowStatus();
 
@@ -116,7 +116,7 @@
             navegador.GoBack(); 
             navegador.ShowStatus();
 
-            navegador.VisitPage("https://www.UNIVERSIDAD ESTATAL AMAZONICA.com");
+            navegador.Visitar_Pagina("https://www.UNIVERSIDAD ESTATAL AMAZONICA.com");
             navegador.ShowStatus(); 
 
             navegador.GoBack(); 

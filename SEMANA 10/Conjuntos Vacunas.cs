@@ -45,8 +45,8 @@ var vacunados_con_AstraZeneca = new HashSet<string>();
 var total_de_Vacunados = new HashSet<string>(vacunados_con_Pfizer);
 total_de_Vacunados.UnionWith(vacunados_con_AstraZeneca);
 
-var No_Vacunados = new HashSet<string>(total_de_personas);
-No_Vacunados.ExceptWith(total_de_Vacunados);
+var no_vacunados = new HashSet<string>(total_de_personas);
+no_vacunados.ExceptWith(total_de_Vacunados);
 
 // Ciudadanos que han recibido ambas dosis.
 
@@ -69,9 +69,9 @@ Console.WriteLine("=====================================================");
 Console.WriteLine($"    Informacion sobre la vacunación del COVID-19    ");
 Console.WriteLine("=====================================================");
 
-Console.WriteLine($"\n Personas que no se han vacunado ({No_Vacunados.Count}):");
+Console.WriteLine($"\n Personas que no se han vacunado ({no_vacunados.Count}):");
 Console.WriteLine("=======================================");
-    foreach (var nv in No_Vacunados)
+    foreach (var nv in no_vacunados)
 {
     Console.WriteLine(nv);
 }

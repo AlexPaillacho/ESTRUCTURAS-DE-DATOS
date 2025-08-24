@@ -7,6 +7,7 @@ Console.WriteLine("UNIVERSIDAD ESTATAL AMAZONICA");
 var total_de_personas = new HashSet<string>();
 
     for (int i = 1; i <= 500; i++)
+
 {
     total_de_personas.Add($"persona {i}");
 }
@@ -36,49 +37,58 @@ var vacunados_con_AstraZeneca = new HashSet<string>();
 }
 
 
-// 2. Aplicar operaciones de teoría de conjuntos
+// Aplicamos union, interseccion, diferencia para cada grupo de personas.
 
-// Ciudadanos que no se han vacunado
-var todosVacunados = new HashSet<string>(vacunados_con_Pfizer);
-todosVacunados.UnionWith(vacunados_con_AstraZeneca);
-var noVacunados = new HashSet<string>(total_de_personas);
-noVacunados.ExceptWith(todosVacunados);
+// Ciudadanos que no se han vacunado.
 
-// Ciudadanos que han recibido ambas dosis (intersección)
-var ambasDosis = new HashSet<string>(vacunados_con_Pfizer);
-ambasDosis.IntersectWith(vacunados_con_AstraZeneca);
+var total_de_Vacunados = new HashSet<string>(vacunados_con_Pfizer);
+total_de_Vacunados.UnionWith(vacunados_con_AstraZeneca);
 
-// Ciudadanos que solo han recibido la vacuna de Pfizer (diferencia)
-var soloPfizer = new HashSet<string>(vacunados_con_Pfizer);
-soloPfizer.ExceptWith(vacunados_con_AstraZeneca);
+var No_Vacunados = new HashSet<string>(total_de_personas);
+No_Vacunados.ExceptWith(total_de_Vacunados);
 
-// Ciudadanos que solo han recibido la vacuna de AstraZeneca (diferencia)
-var soloAstraZeneca = new HashSet<string>(vacunados_con_AstraZeneca);
-soloAstraZeneca.ExceptWith(vacunados_con_Pfizer);
+// Ciudadanos que han recibido ambas dosis.
 
-// 3. Imprimir los resultados
-Console.WriteLine($"--- Reporte de Vacunación COVID-19 ---");
+var ambas_dosis = new HashSet<string>(vacunados_con_Pfizer);
+ambas_dosis.IntersectWith(vacunados_con_AstraZeneca);
 
-Console.WriteLine($"\n Ciudadanos que no se han vacunado ({noVacunados.Count}):");
-foreach (var c in noVacunados)
+// Ciudadanos que solo han recibido la vacuna de Pfizer.
+
+var solo_Pfizer = new HashSet<string>(vacunados_con_Pfizer);
+solo_Pfizer.ExceptWith(vacunados_con_AstraZeneca);
+
+// Ciudadanos que solo han recibido la vacuna de AstraZeneca.
+
+var solo_AstraZeneca = new HashSet<string>(vacunados_con_AstraZeneca);
+solo_AstraZeneca.ExceptWith(vacunados_con_Pfizer);
+
+// Imprimimos los resultados
+
+Console.WriteLine($"    Informacion sobre la vacunación del COVID-19    ");
+
+Console.WriteLine($"\n Personas que no se han vacunado ({No_Vacunados.Count}):");
+
+    foreach (var nv in No_Vacunados)
 {
-    Console.WriteLine(c);
+    Console.WriteLine(nv);
 }
 
-Console.WriteLine($"\n Ciudadanos que han recibido ambas dosis ({ambasDosis.Count}):");
-foreach (var c in ambasDosis)
+Console.WriteLine($"\n Personas que han recibido ambas dosis ({ambas_dosis.Count}):");
+
+    foreach (var ad in ambas_dosis)
 {
-    Console.WriteLine(c);
+    Console.WriteLine(ad);
 }
 
-Console.WriteLine($"\n Ciudadanos que solo han recibido la vacuna de Pfizer ({soloPfizer.Count}):");
-foreach (var c in soloPfizer)
+Console.WriteLine($"\n Personas que solo han recibido la vacuna de Pfizer ({solo_Pfizer.Count}):");
+
+    foreach (var f in solo_Pfizer)
 {
-    Console.WriteLine(c);
+    Console.WriteLine(f);
 }
 
-Console.WriteLine($"\n Ciudadanos que solo han recibido la vacuna de AstraZeneca ({soloAstraZeneca.Count}):");
-foreach (var c in soloAstraZeneca)
+Console.WriteLine($"\n Personas que solo han recibido la vacuna de AstraZeneca ({solo_AstraZeneca.Count}):");
+foreach (var A in solo_AstraZeneca)
 {
-    Console.WriteLine(c);
+    Console.WriteLine(A);
 }

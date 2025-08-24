@@ -1,6 +1,7 @@
 ﻿
-Console.WriteLine("UNIVERSIDAD ESTATAL AMAZONICA");
-
+Console.WriteLine("=========================================");
+Console.WriteLine($"      UNIVERSIDAD ESTATAL AMAZONICA     ");
+Console.WriteLine("=========================================");
 
 // Creamos el numero de personas del 1 al 500.
 
@@ -64,16 +65,19 @@ solo_AstraZeneca.ExceptWith(vacunados_con_Pfizer);
 
 // Imprimimos los resultados
 
+Console.WriteLine("=====================================================");
 Console.WriteLine($"    Informacion sobre la vacunación del COVID-19    ");
+Console.WriteLine("=====================================================");
 
 Console.WriteLine($"\n Personas que no se han vacunado ({No_Vacunados.Count}):");
-
+Console.WriteLine("=======================================");
     foreach (var nv in No_Vacunados)
 {
     Console.WriteLine(nv);
 }
 
 Console.WriteLine($"\n Personas que han recibido ambas dosis ({ambas_dosis.Count}):");
+Console.WriteLine("=============================================");
 
     foreach (var ad in ambas_dosis)
 {
@@ -81,6 +85,7 @@ Console.WriteLine($"\n Personas que han recibido ambas dosis ({ambas_dosis.Count
 }
 
 Console.WriteLine($"\n Personas que solo han recibido la vacuna de Pfizer ({solo_Pfizer.Count}):");
+Console.WriteLine("=========================================================");
 
     foreach (var f in solo_Pfizer)
 {
@@ -88,6 +93,7 @@ Console.WriteLine($"\n Personas que solo han recibido la vacuna de Pfizer ({solo
 }
 
 Console.WriteLine($"\n Personas que solo han recibido la vacuna de AstraZeneca ({solo_AstraZeneca.Count}):");
+Console.WriteLine("==============================================================");
 foreach (var A in solo_AstraZeneca)
 {
     Console.WriteLine(A);

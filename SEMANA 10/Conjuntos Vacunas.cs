@@ -3,35 +3,46 @@ Console.WriteLine("UNIVERSIDAD ESTATAL AMAZONICA");
 
 
 
-//Generar los datos ficticios
-var todosCiudadanos = new HashSet<string>();
-for (int i = 1; i <= 500; i++)
+// Creamos el numero de personas del 1 al 500.
+
+var total_de_personas = new HashSet<string>();
+
+    for (int i = 1; i <= 500; i++)
 {
-    todosCiudadanos.Add($"Ciudadano {i}");
+    total_de_personas.Add($"persona {i}");
 }
 
-// Simular vacunados, seleccionando al azar del conjunto total
-var rnd = new Random();
-var listaTodosCiudadanos = todosCiudadanos.ToList();
+// Simulamos las personas vacunados esto seria al azar por que utilizamos numeros aleatorios.
+
+var aleatorio = new Random();
+
+var lista_de_todas_las_personas = total_de_personas.ToList();
+
+// Creamos un conjunto de 75 personas vacunadas con Pfizer.
 
 var vacunadosPfizer = new HashSet<string>();
-for (int i = 0; i < 75; i++)
+
+    for (int i = 0; i < 75; i++)
 {
-    vacunadosPfizer.Add(listaTodosCiudadanos[rnd.Next(listaTodosCiudadanos.Count)]);
+    vacunadosPfizer.Add(lista_de_todas_las_personas[aleatorio.Next(lista_de_todas_las_personas.Count)]);
 }
 
+// Creamos un conjunto de 75 personas vacunadas con AstraZeneca
+
 var vacunadosAstraZeneca = new HashSet<string>();
-for (int i = 0; i < 75; i++)
+
+    for (int i = 0; i < 75; i++)
 {
-    vacunadosAstraZeneca.Add(listaTodosCiudadanos[rnd.Next(listaTodosCiudadanos.Count)]);
+    vacunadosAstraZeneca.Add(lista_de_todas_las_personas[aleatorio.Next(lista_de_todas_las_personas.Count)]);
 }
+
 
 // 2. Aplicar operaciones de teoría de conjuntos
 
 // Ciudadanos que no se han vacunado
 var todosVacunados = new HashSet<string>(vacunadosPfizer);
 todosVacunados.UnionWith(vacunadosAstraZeneca);
-var noVacunados = new HashSet<string>(todosCiudadanos);
+var noVacunados = new HashSet<string>(total_de_personas);
 noVacunados.ExceptWith(todosVacunados);
 
 // Ciudadanos que han recibido ambas dosis (intersección)

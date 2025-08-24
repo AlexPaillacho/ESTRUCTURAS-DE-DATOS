@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ESTRUCTURAS DE DATOS\\ESTRUCTURAS-DE-DATOS-2\\SEMANA 10\\SEMANA 10.csproj",
+      "projectUniqueName": "C:\\ESTRUCTURAS-DE-DATOS\\ESTRUCTURAS-DE-DATOS\\SEMANA 10\\SEMANA 10.csproj",
       "projectName": "SEMANA 10",
-      "projectPath": "C:\\ESTRUCTURAS DE DATOS\\ESTRUCTURAS-DE-DATOS-2\\SEMANA 10\\SEMANA 10.csproj",
+      "projectPath": "C:\\ESTRUCTURAS-DE-DATOS\\ESTRUCTURAS-DE-DATOS\\SEMANA 10\\SEMANA 10.csproj",
       "packagesPath": "C:\\Users\\alex\\.nuget\\packages\\",
-      "outputPath": "C:\\ESTRUCTURAS DE DATOS\\ESTRUCTURAS-DE-DATOS-2\\SEMANA 10\\obj\\",
+      "outputPath": "C:\\ESTRUCTURAS-DE-DATOS\\ESTRUCTURAS-DE-DATOS\\SEMANA 10\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alex\\AppData\\Roaming\\NuGet\\NuGet.Config"

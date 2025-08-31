@@ -32,16 +32,14 @@
 
     public static void Main(string[] args)
     {
-        // Esta línea estaba fuera de la clase y el método.
-        // Ahora está en el lugar correcto.
-        Console.WriteLine("Hello, World!");
+       
 
         bool salir = false;
         while (!salir)
         {
             MostrarMenu();
             string opcion = Console.ReadLine();
-            Console.WriteLine(); // Añade un espacio para mejor lectura
+            Console.WriteLine();
 
             switch (opcion)
             {
@@ -65,6 +63,9 @@
 
     private static void MostrarMenu()
     {
+        Console.WriteLine("=================== ====================");
+        Console.WriteLine("UNIVERSIDAD ESTATAL AMAZONICA");
+        Console.WriteLine("=================== ====================");
         Console.WriteLine("==================== MENÚ ====================");
         Console.WriteLine();
         Console.WriteLine("1. Traducir una frase");

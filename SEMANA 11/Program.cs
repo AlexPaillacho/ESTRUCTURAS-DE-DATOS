@@ -1,20 +1,6 @@
-﻿public class APP
+﻿public class Traducción
 {
-    // Diccionario para la traducción de inglés a español
-    private static Dictionary<string, string> diccionarioInglesEspanol = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
-    {
-        {"Time", "tiempo"},
-        {"Person", "persona"},
-        {"Year", "año"},
-        {"Way", "camino"},
-        {"Day", "día"},
-        {"Thing", "cosa"},
-        {"Man", "hombre"},
-        {"World", "mundo"},
-        {"Life", "vida"},
-        {"Hand", "mano"}
-    };
-
+  
     // Diccionario para la traducción de español a inglés
     private static Dictionary<string, string> diccionarioEspanolIngles = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
     {
@@ -26,8 +12,17 @@
         {"cosa", "Thing"},
         {"hombre", "Man"},
         {"mundo", "World"},
-        {"vida", "Life"},
-        {"mano", "Hand"}
+        {"Este", "This"},
+        {"es", "is"},
+        {"depende", "depends"},
+        {"mucho", "much"},
+        {"del", "on the"},
+        {"ojo", "eye"},
+        {"que", "that"},
+        {"lo", "sees"},
+        {"ve", "it"},
+        {"hermoso", "beautiful"},
+       { "Este día es hermoso depende mucho del ojo que lo ve","This day is beautiful, it depends a lot on the eye that sees it" }
     };
 
     public static void Main(string[] args)
@@ -38,7 +33,7 @@
         while (!salir)
         {
             MostrarMenu();
-            string opcion = Console.ReadLine();
+            string? opcion = Console.ReadLine();
             Console.WriteLine();
 
             switch (opcion)
@@ -77,22 +72,20 @@
 
     private static void TraducirFrase()
     {
-        Console.Write("Ingrese la frase a traducir (inglés o español): ");
-        string frase = Console.ReadLine();
+        Console.WriteLine("===============================");
+
+        Console.Write("Ingrese la frase a traducir que quiere traducir a ingles: ");
+     
+        string? frase = Console.ReadLine();
+
         string[] palabras = frase.Split(' ');
         string[] traduccion = new string[palabras.Length];
 
         for (int i = 0; i < palabras.Length; i++)
         {
-            string palabra = palabras[i];
+            string? palabra = palabras[i];
             
-            // Intenta traducir de inglés a español
-            if (diccionarioInglesEspanol.ContainsKey(palabra))
-            {
-                traduccion[i] = diccionarioInglesEspanol[palabra];
-            }
-            // Si no se encuentra, intenta traducir de español a inglés
-            else if (diccionarioEspanolIngles.ContainsKey(palabra))
+           if (diccionarioEspanolIngles.ContainsKey(palabra))
             {
                 traduccion[i] = diccionarioEspanolIngles[palabra];
             }
@@ -109,19 +102,19 @@
     {
         Console.WriteLine("=== Agregar Nuevas Palabras ===");
         Console.Write("Ingrese la palabra en inglés: ");
-        string palabraIngles = Console.ReadLine();
+        string? palabraIngles = Console.ReadLine();
         Console.Write("Ingrese la traducción en español: ");
-        string palabraEspanol = Console.ReadLine();
+        string? palabraEspanol = Console.ReadLine();
 
         // Evita agregar palabras que ya existen
-        if (diccionarioInglesEspanol.ContainsKey(palabraIngles))
+        if (diccionarioEspanolIngles.ContainsKey  (palabraIngles))
         {
             Console.WriteLine($"La palabra '{palabraIngles}' ya existe en el diccionario.");
             return;
         }
 
         // Agrega la palabra en ambos diccionarios para la traducción bidireccional
-        diccionarioInglesEspanol.Add(palabraIngles, palabraEspanol);
+        
         diccionarioEspanolIngles.Add(palabraEspanol, palabraIngles);
         
         Console.WriteLine($"Palabra '{palabraIngles}' y su traducción '{palabraEspanol}' agregadas correctamente.");

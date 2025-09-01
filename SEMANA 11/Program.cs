@@ -1,4 +1,4 @@
-﻿public class Program
+﻿public class APP
 {
     public static void Main(string[] args)
     {
@@ -21,10 +21,10 @@
                     break;
                 case "0":
                     salir = true;
-                    Console.WriteLine("Saliendo del programa. ¡Hasta luego!");
+                    Console.WriteLine("Finalizando el programa ¡ Se finalizo correctamente! ");
                     break;
                 default:
-                    Console.WriteLine("Opción no válida. Por favor, seleccione una opción del menú.");
+                    Console.WriteLine("Opción no válida. Por favor seleccione una opción del menú.");
                     break;
             }
             Console.WriteLine();
@@ -34,26 +34,26 @@
 
 public class Traductor
 {
-    // Diccionarios para la traducción bidireccional.
+   
     private Dictionary<string, string> diccionarioInglesEspanol;
     private Dictionary<string, string> diccionarioEspanolIngles;
 
     public Traductor()
     {
-        // Diccionario para la traducción de español a inglés.
+        
         diccionarioEspanolIngles = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
         {
-            {"tiempo", "Time"},
-            {"persona", "Person"},
-            {"año", "Year"},
-            {"camino", "Way"},
-            {"día", "Day"},
-            {"cosa", "Thing"},
-            {"hombre", "Man"},
-            {"mundo", "World"},
-            {"vida", "Life"},
-            {"mano", "Hand"},
-            {"ojo", "Eye"},
+            {"tiempo", "time"},
+            {"persona", "person"},
+            {"año", "year"},
+            {"camino", "way"},
+            {"día", "day"},
+            {"cosa", "thing"},
+            {"hombre", "man"},
+            {"mundo", "world"},
+            {"vida", "life"},
+            {"mano", "hand"},
+            {"ojo", "eye"},
             {"este", "this"},
             {"es", "is"},
             {"depende", "depends"},
@@ -62,10 +62,13 @@ public class Traductor
             {"que", "that"},
             {"lo", "it"},
             {"ve", "sees"},
-            {"hermoso", "beautiful"}
+            {"hermoso", "beautiful"},
+            {"este dia es hermoso depende mucho del ojo que lo ve", "this day is beautiful it depends a lot on the eye that sees it"},
+        
+             
         };
 
-        // Diccionario para la traducción de inglés a español.
+        
         diccionarioInglesEspanol = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
         {
             {"time", "tiempo"},
@@ -87,7 +90,8 @@ public class Traductor
             {"that", "que"},
             {"it", "lo"},
             {"sees", "ve"},
-            {"beautiful", "hermoso"}
+            {"beautiful", "hermoso"},
+            {"this day is beautiful it depends a lot on the eye that sees it", "este dia es hermoso depende mucho del ojo que lo ve"}
         };
     }
 
@@ -149,11 +153,12 @@ public class Traductor
 
         if (string.IsNullOrWhiteSpace(palabraEspanol) || string.IsNullOrWhiteSpace(palabraIngles))
         {
-            Console.WriteLine("Las palabras no pueden estar vacías. Por favor, intente de nuevo.");
+            Console.WriteLine("Las palabras no pueden estar vacías. Por favor intente de nuevo.");
             return;
         }
 
         // Evita agregar palabras que ya existen en ambos diccionarios
+
         if (diccionarioEspanolIngles.ContainsKey(palabraEspanol) || diccionarioInglesEspanol.ContainsKey(palabraIngles))
         {
             Console.WriteLine($"La palabra '{palabraEspanol}' o '{palabraIngles}' ya existe en el diccionario.");

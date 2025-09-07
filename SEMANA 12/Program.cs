@@ -16,11 +16,11 @@ public class TorneoFutbol
         if (!equipos.ContainsKey(nombreEquipo))
         {
             equipos[nombreEquipo] = new HashSet<string>();
-            Console.WriteLine($"✅ Equipo '{nombreEquipo}' registrado.");
+            Console.WriteLine($" Equipo '{nombreEquipo}' registrado.");
         }
         else
         {
-            Console.WriteLine($"❌ El equipo '{nombreEquipo}' ya existe.");
+            Console.WriteLine($" El equipo '{nombreEquipo}' ya existe.");
         }
     }
 
@@ -28,7 +28,7 @@ public class TorneoFutbol
     {
         if (jugadoresTotales.Contains(nombreJugador))
         {
-            Console.WriteLine($"❌ El jugador '{nombreJugador}' ya está registrado en el torneo.");
+            Console.WriteLine($" El jugador '{nombreJugador}' ya está registrado en el torneo.");
             return;
         }
 
@@ -36,11 +36,11 @@ public class TorneoFutbol
         {
             equipos[nombreEquipo].Add(nombreJugador);
             jugadoresTotales.Add(nombreJugador);
-            Console.WriteLine($"✅ Jugador '{nombreJugador}' agregado a '{nombreEquipo}'.");
+            Console.WriteLine($" Jugador '{nombreJugador}' agregado a '{nombreEquipo}'.");
         }
         else
         {
-            Console.WriteLine($"❌ El equipo '{nombreEquipo}' no existe. Registre el equipo primero.");
+            Console.WriteLine($" El equipo '{nombreEquipo}' no existe. Registre el equipo primero.");
         }
     }
 
@@ -48,7 +48,7 @@ public class TorneoFutbol
 
     public void MostrarTorneoCompleto()
     {
-        Console.WriteLine("\n📋 Reporte del Torneo:");
+        Console.WriteLine("\n Reporte del Torneo:");
         if (equipos.Count == 0)
         {
             Console.WriteLine("El torneo no tiene equipos registrados.");
@@ -74,7 +74,7 @@ public class TorneoFutbol
 
     public void ConsultarJugadoresPorEquipo(string nombreEquipo)
     {
-        Console.WriteLine($"\n🔍 Jugadores del equipo '{nombreEquipo}':");
+        Console.WriteLine($"\n Jugadores del equipo '{nombreEquipo}':");
         if (equipos.TryGetValue(nombreEquipo, out var jugadores))
         {
             if (jugadores.Count > 0)
@@ -91,7 +91,7 @@ public class TorneoFutbol
         }
         else
         {
-            Console.WriteLine($"❌ El equipo '{nombreEquipo}' no existe.");
+            Console.WriteLine($" El equipo '{nombreEquipo}' no existe.");
         }
     }
 }

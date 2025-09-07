@@ -143,7 +143,7 @@ public class Registro
             Console.WriteLine("1. Registrar un nuevo equipo");
             Console.WriteLine("2. Registrar un nuevo jugador");
             Console.WriteLine("3. Mostrar todos los equipos y jugadores");
-            Console.WriteLine("5. Salir");
+            Console.WriteLine("4. Salir");
             Console.Write("Por favor, seleccione una opción: ");
 
             string opcion = Console.ReadLine();
@@ -176,7 +176,7 @@ public class Registro
 
                 case "5":
                     salir = true;
-                    Console.WriteLine("Cerrando la aplicacion. ¡Hasta pronto!");
+                    Console.WriteLine("Cerrando la aplicacion");
                     break;
 
                 default:

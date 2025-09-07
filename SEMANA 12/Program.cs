@@ -91,12 +91,12 @@ public class Campeonato_de_futbol
             {
                 foreach (var jugador in equipo.Value)
                 {
-                    Console.WriteLine($"    • {jugador}");
+                    Console.WriteLine($"   {jugador}");
                 }
             }
             else
             {
-                Console.WriteLine("    • (Sin jugadores)");
+                Console.WriteLine(" (Sin jugadores)");
             }
         }
     }
@@ -110,12 +110,12 @@ public class Campeonato_de_futbol
             {
                 foreach (var jugador in jugadores)
                 {
-                    Console.WriteLine($"    • {jugador}");
+                    Console.WriteLine($" {jugador}");
                 }
             }
             else
             {
-                Console.WriteLine($"    • El equipo '{nombreEquipo}' no tiene jugadores registrados.");
+                Console.WriteLine($"  El equipo '{nombreEquipo}' no tiene jugadores registrados.");
             }
         }
         else
@@ -143,7 +143,6 @@ public class Registro
             Console.WriteLine("1. Registrar un nuevo equipo");
             Console.WriteLine("2. Registrar un nuevo jugador");
             Console.WriteLine("3. Mostrar todos los equipos y jugadores");
-            Console.WriteLine("4. Consultar jugadores de un equipo");
             Console.WriteLine("5. Salir");
             Console.Write("Por favor, seleccione una opción: ");
 

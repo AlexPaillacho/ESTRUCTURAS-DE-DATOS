@@ -1,61 +1,53 @@
-﻿
-Console.WriteLine("UNIVERSIDAD ESTATAL AMAZONICA");
-
-class CatalogoRevistas
+﻿class Catalogo_Revistas
 {
-    // Catálogo de revistas (lista de cadenas de texto).
     private List<string> revistas = new List<string>();
 
-    public CatalogoRevistas()
+    public Catalogo_Revistas()
     {
-        // Se inicializa el catálogo con 10 títulos de revistas.
-        revistas.Add("National Geographic");
-        revistas.Add("Time");
-        revistas.Add("The Economist");
-        revistas.Add("Vogue");
-        revistas.Add("Science");
-        revistas.Add("Wired");
-        revistas.Add("Forbes");
-        revistas.Add("Playboy");
-        revistas.Add("New Yorker");
-        revistas.Add("People");
+        
+        revistas.Add("el comercio");
+        revistas.Add("extra");
+        revistas.Add("yambal");
+        revistas.Add("diario");
+        revistas.Add("el metro");
+        revistas.Add("dominical");
+        revistas.Add("ciencia");
+        revistas.Add("deporte");
+        revistas.Add("Quito");
+        revistas.Add("farandula");
     }
-
-    /// <summary>
-    /// Método de búsqueda iterativa para encontrar un título en el catálogo.
-    /// </summary>
-    /// <param name="tituloBuscado">El título de la revista a buscar.</param>
-    /// <returns>Verdadero si el título se encuentra, falso en caso contrario.</returns>
-    public bool BuscarTitulo(string tituloBuscado)
+      
+      // Buscar el nombre de la revista.
+    public bool Buscar_Titulo(string titulo_buscado)
     {
-        // Se itera sobre cada título en la lista 'revistas'.
+
         foreach (string titulo in revistas)
         {
-            // Se compara el título actual con el título buscado.
-            // La comparación ignora mayúsculas y minúsculas para una búsqueda más flexible.
-            if (string.Equals(titulo, tituloBuscado, StringComparison.OrdinalIgnoreCase))
+
+            if (string.Equals(titulo, titulo_buscado, StringComparison.OrdinalIgnoreCase))
             {
-                // Si se encuentra una coincidencia, se retorna 'true'.
+
                 return true;
             }
         }
-        // Si el bucle termina sin encontrar el título, se retorna 'false'.
+
         return false;
     }
 
-    /// <summary>
-    /// Menú interactivo para gestionar la aplicación.
-    /// </summary>
+    
+    // Menú interactivo para gestionar la aplicación.
+    
     public void MostrarMenu()
     {
-        Console.WriteLine("--- Catálogo de Revistas ---");
+        Console.WriteLine("==============================");
+        Console.WriteLine("UNIVERSIDAD ESTATAL AMAZONICA ");
+        Console.WriteLine("===============================");
+        Console.WriteLine("=== Catálogo de Revistas ===");
         Console.WriteLine("1. Buscar un título de revista");
         Console.WriteLine("2. Salir");
     }
 
-    /// <summary>
-    /// Método principal que contiene la lógica de la aplicación.
-    /// </summary>
+   
     public void Ejecutar()
     {
         bool continuar = true;
@@ -63,14 +55,14 @@ class CatalogoRevistas
         {
             MostrarMenu();
             Console.Write("Seleccione una opción: ");
-            string opcion = Console.ReadLine();
+            string? opcion = Console.ReadLine();
 
             switch (opcion)
             {
                 case "1":
-                    Console.Write("Ingrese el título de la revista a buscar: ");
-                    string tituloBuscado = Console.ReadLine();
-                    bool encontrado = BuscarTitulo(tituloBuscado);
+                    Console.Write("Ingrese el título de la revista que busca: ");
+                    string? titulo_Buscado = Console.ReadLine();
+                    bool encontrado = Buscar_Titulo(titulo_Buscado);
                     
                     if (encontrado)
                     {
@@ -85,11 +77,11 @@ class CatalogoRevistas
                 
                 case "2":
                     continuar = false;
-                    Console.WriteLine("Saliendo del programa...");
+                    Console.WriteLine("Fializando la busqueda");
                     break;
                 
                 default:
-                    Console.WriteLine("Opción no válida. Intente de nuevo.");
+                    Console.WriteLine("Opción no valida / Intente nuevamente");
                     Console.WriteLine();
                     break;
             }
@@ -99,7 +91,7 @@ class CatalogoRevistas
     // Punto de entrada principal para la aplicación.
     static void Main(string[] args)
     {
-        CatalogoRevistas app = new CatalogoRevistas();
+        Catalogo_Revistas app = new Catalogo_Revistas();
         app.Ejecutar();
     }
 }

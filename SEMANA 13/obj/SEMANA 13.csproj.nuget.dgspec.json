@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\ESTRUCTURAS-DE-DATOS\\ESTRUCTURAS-DE-DATOS\\SEMANA 13\\SEMANA 13.csproj": {}
+    "C:\\ESTRUCTURAS-DE-DATOS\\ESTRUCTURAS-DE-DATOS\\SEMANA 13\\SEMANA 13.csproj": {}
   },
   "projects": {
-    "c:\\ESTRUCTURAS-DE-DATOS\\ESTRUCTURAS-DE-DATOS\\SEMANA 13\\SEMANA 13.csproj": {
+    "C:\\ESTRUCTURAS-DE-DATOS\\ESTRUCTURAS-DE-DATOS\\SEMANA 13\\SEMANA 13.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\ESTRUCTURAS-DE-DATOS\\ESTRUCTURAS-DE-DATOS\\SEMANA 13\\SEMANA 13.csproj",
+        "projectUniqueName": "C:\\ESTRUCTURAS-DE-DATOS\\ESTRUCTURAS-DE-DATOS\\SEMANA 13\\SEMANA 13.csproj",
         "projectName": "SEMANA 13",
-        "projectPath": "c:\\ESTRUCTURAS-DE-DATOS\\ESTRUCTURAS-DE-DATOS\\SEMANA 13\\SEMANA 13.csproj",
+        "projectPath": "C:\\ESTRUCTURAS-DE-DATOS\\ESTRUCTURAS-DE-DATOS\\SEMANA 13\\SEMANA 13.csproj",
         "packagesPath": "C:\\Users\\alex\\.nuget\\packages\\",
-        "outputPath": "c:\\ESTRUCTURAS-DE-DATOS\\ESTRUCTURAS-DE-DATOS\\SEMANA 13\\obj\\",
+        "outputPath": "C:\\ESTRUCTURAS-DE-DATOS\\ESTRUCTURAS-DE-DATOS\\SEMANA 13\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alex\\AppData\\Roaming\\NuGet\\NuGet.Config"

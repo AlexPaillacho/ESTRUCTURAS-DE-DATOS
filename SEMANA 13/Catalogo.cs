@@ -1,5 +1,5 @@
 ﻿class Catalogo_Revistas
-{
+{     // Lista de revistas total (10 )
     private List<string> revistas = new List<string>();
 
     public Catalogo_Revistas()

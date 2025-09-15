@@ -5,7 +5,7 @@ class Catalogo_Revistas
 
     public Catalogo_Revistas()
     {
-        
+        // Lista de revistas total ( 10 )
         revistas.Add("el comercio");
         revistas.Add("extra");
         revistas.Add("yambal");

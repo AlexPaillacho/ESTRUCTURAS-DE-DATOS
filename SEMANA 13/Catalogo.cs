@@ -1,5 +1,8 @@
-﻿class Catalogo_Revistas
-{     // Lista de revistas total (10 )
+﻿
+class Catalogo_Revistas
+
+// Lista de revistas total (10 )
+{
     private List<string> revistas = new List<string>();
 
     public Catalogo_Revistas()
@@ -16,8 +19,8 @@
         revistas.Add("Quito");
         revistas.Add("farandula");
     }
-      
-      // Buscar el nombre de la revista.
+
+    // Buscar el nombre de la revista.
     public bool Buscar_Titulo(string titulo_buscado)
     {
 
@@ -34,9 +37,9 @@
         return false;
     }
 
-    
+
     // Menú interactivo para gestionar la aplicación.
-    
+
     public void MostrarMenu()
     {
         Console.WriteLine("==============================");
@@ -47,7 +50,7 @@
         Console.WriteLine("2. Salir");
     }
 
-   
+
     public void Ejecutar()
     {
         bool continuar = true;
@@ -63,7 +66,7 @@
                     Console.Write("Ingrese el título de la revista que busca: ");
                     string? titulo_Buscado = Console.ReadLine();
                     bool encontrado = Buscar_Titulo(titulo_Buscado);
-                    
+
                     if (encontrado)
                     {
                         Console.WriteLine("Resultado: Encontrado");
@@ -74,12 +77,12 @@
                     }
                     Console.WriteLine();
                     break;
-                
+
                 case "2":
                     continuar = false;
                     Console.WriteLine("Fializando la busqueda");
                     break;
-                
+
                 default:
                     Console.WriteLine("Opción no valida / Intente nuevamente");
                     Console.WriteLine();

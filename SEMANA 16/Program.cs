@@ -40,17 +40,17 @@ public class GrafoVuelos
         // Origen:  ECUADOR
         AgregarVuelo("ECUADOR", new Vuelo { Destino = "MADRID", Precio = 1200, Numero_Vuelo = "AV108" });
         AgregarVuelo("ECUADOR", new Vuelo { Destino = "JAPON", Precio = 2000, Numero_Vuelo = "AV102" });
-        AgregarVuelo("ECUADOR", new Vuelo { Destino = "RUSIA", Precio = 2500, Numero_Vuelo = "IB202" });
+        AgregarVuelo("ECUADOR", new Vuelo { Destino = "MADRID", Precio = 2500, Numero_Vuelo = "IB202" });
 
         // Origen: MADRID 
-        AgregarVuelo("MADRID", new Vuelo { Destino = "MEXICO", Precio = 1000, Numero_Vuelo = "IB404" });
+        AgregarVuelo("MADRID", new Vuelo { Destino = "EEUU", Precio = 1000, Numero_Vuelo = "AV404" });
         AgregarVuelo("MADRID", new Vuelo { Destino = "EEUU", Precio = 400, Numero_Vuelo = "IB505" });
 
         // Origen: MEXICO
-        AgregarVuelo("MEXICO", new Vuelo { Destino = "ECUADOR", Precio = 600, Numero_Vuelo = "AV238" });
+        AgregarVuelo("ECUADOR", new Vuelo { Destino = "JAPON", Precio = 600, Numero_Vuelo = "IB238" });
 
         // Origen: MEXICO
-        AgregarVuelo("MEXICO", new Vuelo { Destino = "MADRID", Precio = 900, Numero_Vuelo = "IB905" });
+        AgregarVuelo("EEUU", new Vuelo { Destino = "MADRID", Precio = 900, Numero_Vuelo = "IB905" });
         
        
     }
@@ -185,8 +185,8 @@ public class Programa
         
         grafo.MostrarGrafo();
 
-        string origenBusqueda = "ECUADOR";
-        string destinoBusqueda = "JAPON";
+        string origenBusqueda = "ECUDOR";
+        string destinoBusqueda = "MADRID";
 
        
         var (costo, ruta) = grafo.EncontrarRutaMasBarata(origenBusqueda, destinoBusqueda);

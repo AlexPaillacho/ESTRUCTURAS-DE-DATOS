@@ -1,23 +1,23 @@
 ﻿
 
-// --- 1. Definición de la Clase Vuelo (Arista) ---
+// Definición de la Clase Vuelo 
 public class Vuelo
 {
-    // Una Arista del grafo
-    public string Destino { get; set; } // Vértice al que apunta
-    public decimal Precio { get; set; }  // Peso de la arista
-    public string NumeroVuelo { get; set; }
+    
+    public string Destino { get; set; }
+    public decimal Precio { get; set; }  
+    public string Numero_Vuelo { get; set; }
 
     public override string ToString()
     {
-        return $" -> {Destino} ({NumeroVuelo}) - ${Precio:F2}";
+        return $" -> {Destino} ({Numero_Vuelo}) - ${Precio}";
     }
 }
 
-// --- 2. Definición de la Clase GrafoVuelos (Lista de Adyacencia) ---
+//  Definición de la Clase Vuelos 
 public class GrafoVuelos
 {
-    // Lista de Adyacencia: Aeropuerto (Vértice) -> Lista de Vuelos directos (Aristas)
+    
     private Dictionary<string, List<Vuelo>> Rutas;
 
     public GrafoVuelos()
@@ -34,27 +34,25 @@ public class GrafoVuelos
         Rutas[origen].Add(vuelo);
     }
 
-    // Base de Datos Ficticia
+    // Base de Datos 
     public void CargarRutasFicticias()
     {
-        // Origen: BOG (Bogotá)
-        AgregarVuelo("BOG", new Vuelo { Destino = "MIA", Precio = 250.00m, NumeroVuelo = "AV101" });
-        AgregarVuelo("BOG", new Vuelo { Destino = "MEX", Precio = 180.00m, NumeroVuelo = "LA606" });
-        AgregarVuelo("BOG", new Vuelo { Destino = "MAD", Precio = 550.00m, NumeroVuelo = "IB707" });
+        // Origen:  ECUADOR
+        AgregarVuelo("ECUADOR", new Vuelo { Destino = "MADRID", Precio = 1200, Numero_Vuelo = "AV108" });
+        AgregarVuelo("ECUADOR", new Vuelo { Destino = "JAPON", Precio = 2000, Numero_Vuelo = "AV102" });
+        AgregarVuelo("ECUADOR", new Vuelo { Destino = "RUSIA", Precio = 2500, Numero_Vuelo = "IB202" });
 
-        // Origen: MIA (Miami)
-        AgregarVuelo("MIA", new Vuelo { Destino = "MEX", Precio = 150.00m, NumeroVuelo = "DL404" });
-        AgregarVuelo("MIA", new Vuelo { Destino = "LAX", Precio = 300.75m, NumeroVuelo = "AA505" });
+        // Origen: MADRID 
+        AgregarVuelo("MADRID", new Vuelo { Destino = "MEXICO", Precio = 1000, Numero_Vuelo = "IB404" });
+        AgregarVuelo("MADRID", new Vuelo { Destino = "EEUU", Precio = 400, Numero_Vuelo = "IB505" });
 
-        // Origen: MEX (Ciudad de México)
-        AgregarVuelo("MEX", new Vuelo { Destino = "BOG", Precio = 200.00m, NumeroVuelo = "AM808" });
+        // Origen: MEXICO
+        AgregarVuelo("MEXICO", new Vuelo { Destino = "ECUADOR", Precio = 600, Numero_Vuelo = "AV238" });
 
-        // Origen: MAD (Madrid)
-        AgregarVuelo("MAD", new Vuelo { Destino = "BCN", Precio = 45.99m, NumeroVuelo = "VY909" });
+        // Origen: MEXICO
+        AgregarVuelo("MEXICO", new Vuelo { Destino = "MADRID", Precio = 900, Numero_Vuelo = "IB905" });
         
-        // Agregar algunos aeropuertos sin salidas para que sean considerados como destinos posibles
-        if (!Rutas.ContainsKey("LAX")) Rutas.Add("LAX", new List<Vuelo>());
-        if (!Rutas.ContainsKey("BCN")) Rutas.Add("BCN", new List<Vuelo>());
+       
     }
 
     // Método de Reportería: Visualizar Grafo
@@ -74,19 +72,16 @@ public class GrafoVuelos
         }
     }
 
-    // Método de Consulta: Algoritmo de Dijkstra para la Ruta Más Barata
+    // Método de Consulta
     public (decimal, List<string>) EncontrarRutaMasBarata(string origen, string destino)
     {
-        // 1. Inicialización
+     
         var distancias = new Dictionary<string, decimal>();
         var predecesores = new Dictionary<string, string>();
         
-        // Se simplifica el SortedSet para usar el Comparer predeterminado de Tuple.
-        // Esto asume que el costo (Item1) es suficiente para el ordenamiento,
-        // eliminando la comparación secundaria por nombre de aeropuerto.
         var noVisitados = new SortedSet<(decimal Costo, string Aeropuerto)>();
 
-        // Determinar todos los aeropuertos (vértices)
+        
         var todosLosAeropuertos = Rutas.Keys
             .Concat(Rutas.Values.SelectMany(v => v).Select(v => v.Destino)).Distinct();
 
@@ -101,23 +96,23 @@ public class GrafoVuelos
         distancias[origen] = 0;
         noVisitados.Add((0, origen));
 
-        // 2. Ejecución del Algoritmo de Dijkstra
+        
         while (noVisitados.Any())
         {
-            // Extraer el nodo con la distancia más corta (greedy)
+            
             var (costoActual, actual) = noVisitados.First();
             noVisitados.Remove(noVisitados.First());
 
-            // Si llegamos al destino, detenemos la búsqueda
+           
             if (actual == destino) break;
             
-            // Si el costo actual es mayor que el registrado, descartamos
+           
             if (costoActual > distancias[actual]) continue;
             
-            // Si el nodo no tiene salidas, continuamos
+            
             if (!Rutas.ContainsKey(actual)) continue; 
 
-            // Relajación de aristas
+           
             foreach (var vuelo in Rutas[actual])
             {
                 string vecino = vuelo.Destino;
@@ -125,12 +120,10 @@ public class GrafoVuelos
 
                 if (nuevoCosto < distancias[vecino])
                 {
-                    // La remoción previa requiere buscar por el viejo costo, que es complicado sin el comparador de desempate.
-                    // Para evitar el error en el comparador, ajustamos la remoción a esta forma.
-                    // Nota: Si el aeropuerto existe con su costo anterior, es mejor removerlo antes de insertar.
+                    
                     if (distancias[vecino] != decimal.MaxValue)
                     {
-                        // Buscamos la entrada anterior para eliminarla. Esto puede ser ineficiente si el set es grande.
+                        
                         var oldEntry = noVisitados.FirstOrDefault(x => x.Aeropuerto == vecino);
                         if (oldEntry != default)
                         {
@@ -158,10 +151,10 @@ public class GrafoVuelos
             ruta.Add(paso);
             paso = predecesores[paso];
         }
-        // Verificar que se encontró el camino de vuelta al origen
+        
         if (paso != origen)
         {
-             return (decimal.MaxValue, new List<string>()); // No se encontró camino
+             return (decimal.MaxValue, new List<string>()); 
         }
         ruta.Add(origen);
         ruta.Reverse();
@@ -180,7 +173,7 @@ public class GrafoVuelos
     }
 }
 
-// --- 3. Programa Principal y Análisis ---
+// Programa Principal y Análisis 
 
 public class Programa
 {
@@ -189,26 +182,21 @@ public class Programa
         var grafo = new GrafoVuelos();
         grafo.CargarRutasFicticias();
         
-        // --- Reportería (Visualización y Consulta) ---
+        
         grafo.MostrarGrafo();
 
-        string origenBusqueda = "BOG";
-        string destinoBusqueda = "LAX";
+        string origenBusqueda = "ECUADOR";
+        string destinoBusqueda = "JAPON";
 
-        // Se elimina la línea Stopwatch stopwatch = new Stopwatch();
-
-        // Se elimina stopwatch.Start();
-
-        // Ejecutar la consulta (Algoritmo de Dijkstra)
+       
         var (costo, ruta) = grafo.EncontrarRutaMasBarata(origenBusqueda, destinoBusqueda);
 
-        // Se elimina stopwatch.Stop();
-        
+      
         Console.WriteLine($"\n--- Resultado de la Consulta de Vuelos Baratos ---");
         if (costo != decimal.MaxValue)
         {
             Console.WriteLine($"Origen: {origenBusqueda}, Destino: {destinoBusqueda}");
-            Console.WriteLine($"Costo Total Mínimo: ${costo:F2}");
+            Console.WriteLine($"Costo Total Mínimo: ${costo}");
             Console.WriteLine($"Ruta: {string.Join(" -> ", ruta)}");
         }
         else

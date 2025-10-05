@@ -185,7 +185,7 @@ public class Programa
         
         grafo.MostrarGrafo();
 
-        string origenBusqueda = "ECUDOR";
+        string origenBusqueda = "ECUADOR";
         string destinoBusqueda = "MADRID";
 
        

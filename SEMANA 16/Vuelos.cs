@@ -177,7 +177,7 @@ public class GrafoVuelos
 
 public class Programa
 {
-    public static void Main(string[] args)
+    public static async Task Main(string[] args)
     {
         var grafo = new GrafoVuelos();
         grafo.CargarRutasFicticias();

@@ -58,7 +58,10 @@ public class GrafoVuelos
     // Método de Reportería: Visualizar Grafo
     public void MostrarGrafo()
     {
-        Console.WriteLine("\n--- Reportería: Estructura del Grafo de Vuelos ---");
+        Console.WriteLine("\n============================================");
+        Console.WriteLine("\n============ UNIVERSIDAD ESTATAL AMAZONICA =========");
+        Console.WriteLine("==================================================");
+        Console.WriteLine("\n===== Reportería: Estructura del Grafo de Vuelos =====");
         foreach (var origen in Rutas.Keys.OrderBy(k => k))
         {
             if (Rutas[origen].Count > 0)
